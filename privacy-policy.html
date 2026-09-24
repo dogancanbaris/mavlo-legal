@@ -39,7 +39,7 @@
 <ul>
   <li><strong>Device health data:</strong> with your explicit permission, data from Apple Health such as steps, workouts, active energy, body weight, and sleep. You can decline and still use Mavlo manually.</li>
   <li><strong>Purchases:</strong> your subscription and entitlement status (via RevenueCat and the App Store). We do not receive your full card details.</li>
-  <li><strong>Device &amp; diagnostic data:</strong> app version, device/OS, and de-identified error, performance, and usage events used to keep Mavlo reliable.</li>
+  <li><strong>Device &amp; diagnostic data:</strong> app version, device/OS, and limited error, performance, and usage events used to keep Mavlo reliable.</li>
 </ul>
 
 <h2>2. How we use your information</h2>
@@ -52,20 +52,21 @@
 <p>We process this data to deliver features you request and to operate your account. We do not use it to make automated decisions with legal effects.</p>
 
 <h2>3. How your information is shared</h2>
-<p>We share information only with service providers that help us run Mavlo, and only as needed to deliver a feature you use. These providers act on our behalf and are restricted from using your data for their own purposes.</p>
+<p>We share information only with service providers that help us run Mavlo, and only as needed to deliver a feature you use. Their processing and retention follow their service terms and the permissions and settings described here.</p>
 <ul>
   <li><strong>Google Gemini:</strong> with the separate in-app data-sharing permission, the messages, personal context, images, videos, or voice notes you choose to send may be processed to understand a request, transcribe voice, or prepare a response. You can review an editable voice transcript before sending the request it represents.</li>
   <li><strong>Nutrition data sources</strong> (e.g., USDA FoodData Central, Open Food Facts): used to look up foods and barcodes.</li>
   <li><strong>Billing</strong> (RevenueCat and Apple): to process and validate your subscription.</li>
-  <li><strong>Analytics &amp; reliability</strong>: de-identified diagnostics to keep the app working.</li>
+  <li><strong>Analytics &amp; reliability</strong>: limited diagnostics to keep the app working.</li>
 </ul>
+<p>We use the paid Gemini API. Under <a href="https://ai.google.dev/gemini-api/docs/zdr">Google's current data-retention documentation</a>, Google does not use paid API prompts or responses to improve its products. Google retains prompts, context, and responses for abuse monitoring; its <a href="https://ai.google.dev/gemini-api/docs/usage-policies">published policy states 55 days</a>. When Mavlo uses Google Search grounding for a source-backed answer, Google stores the related prompt, context, and output for 30 days.</p>
 <div class="box"><strong>We never sell your personal data.</strong> We <strong>never</strong> use your health, fitness, or nutrition data for advertising, marketing, or data mining, and we never share it with data brokers. We do not track you across other companies' apps or websites.</div>
 
 <h2>4. Permissions</h2>
 <p>Mavlo asks for permissions only when a feature needs them, with an in-app explanation: <strong>Camera</strong> (meal/label photos), <strong>Photo Library</strong> (choosing photos), <strong>Microphone</strong> (voice input), <strong>Health</strong> (optional Apple Health import), and <strong>Notifications</strong> (reminders). You can change device permissions in your iPhone settings. In the app, you can withdraw Google Gemini data-sharing permission and control whether Mavlo may use the exact wording of reviewed memories in future conversations.</p>
 
 <h2>5. Data retention</h2>
-<p>We keep your account data while your account exists. Images, video, voice notes, transcripts, and related records may be held in private storage when needed to process a request, show its result, or support your data controls. The app provides private-media and account controls for reviewing and deleting information it retains. When you request account deletion, the server processes deletion in stages as described below.</p>
+<p>We keep your account data while your account exists. Images, video, transcripts, and related records may be held in private storage when needed to process a request, show its result, or support your data controls. Raw voice audio is kept temporarily on your device for a transcription retry and sent to Google Gemini when you request transcription; Mavlo does not keep the raw recording in account storage. The app provides a private-media inventory and an in-app path to request removal of retained items. When you request account deletion, the server processes deletion in stages as described below.</p>
 
 <h2>6. Your choices and rights</h2>
 <ul>
