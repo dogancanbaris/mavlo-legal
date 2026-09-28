@@ -20,11 +20,11 @@
 </style></head><body><div class="wrap">
 
 <h1>Mavlo Privacy Policy</h1>
-<p class="sub">Effective date: 2 June 2026 · Last updated: 24 September 2026</p>
+<p class="sub">Effective date: 2 June 2026 · Last updated: 28 September 2026</p>
 
 <p>This Privacy Policy explains how <strong>Dogancan Baris</strong> ("we", "us"), the individual developer of the Mavlo iOS app ("Mavlo", "the app"), collects, uses, shares, and protects your information. Mavlo is a personal health and activity companion that lets you record food and movement by chatting, typing, speaking, or sharing an image. Questions: <a href="mailto:barisdogancan@gmail.com">barisdogancan@gmail.com</a>.</p>
 
-<div class="box"><strong>In short:</strong> We collect the information you give Mavlo to run your account and help with your requests. With the permission shown in the app, personal context may be sent to Google Gemini to generate responses. We do <strong>not</strong> sell your data and we <strong>never</strong> use your health or nutrition data for advertising. You can request an export or account deletion in the app.</div>
+<div class="box"><strong>In short:</strong> We collect the information you give Mavlo to run your account and help with your requests. With the permission shown in the app, personal context may be sent to AI providers (Google Gemini, and TypeSafe's Jev model through OpenRouter) to understand requests and generate responses. They are used only through services that do not train on your data. We do <strong>not</strong> sell your data and we <strong>never</strong> use your health or nutrition data for advertising. You can request an export or account deletion in the app.</div>
 
 <h2>1. Information we collect</h2>
 <h3>Information you provide</h3>
@@ -34,6 +34,7 @@
   <li><strong>Photos and video:</strong> images or short clips of meals, nutrition labels, menus, or activity that you choose to capture or upload for analysis.</li>
   <li><strong>Voice:</strong> short voice recordings and their transcripts when you use voice input.</li>
   <li><strong>Conversations &amp; memory:</strong> the messages you exchange with Mavlo and the preferences/facts you approve Mavlo to remember.</li>
+  <li><strong>Reply feedback:</strong> if you flag one of Mavlo's replies, the reason you choose and any short note you add.</li>
 </ul>
 <h3>Information collected with your permission</h3>
 <ul>
@@ -48,6 +49,7 @@
   <li>To remember your preferences so you don't have to repeat yourself.</li>
   <li>To keep Mavlo safe and reliable (abuse prevention, debugging, support).</li>
   <li>To process your subscription and manage your account.</li>
+  <li>To review replies you flag and improve Mavlo's answers.</li>
 </ul>
 <p>We process this data to deliver features you request and to operate your account. We do not use it to make automated decisions with legal effects.</p>
 
@@ -55,15 +57,20 @@
 <p>We share information only with service providers that help us run Mavlo, and only as needed to deliver a feature you use. Their processing and retention follow their service terms and the permissions and settings described here.</p>
 <ul>
   <li><strong>Google Gemini:</strong> with the separate in-app data-sharing permission, the messages, personal context, images, videos, or voice notes you choose to send may be processed to understand a request, transcribe voice, or prepare a response. You can review an editable voice transcript before sending the request it represents.</li>
+  <li><strong>OpenRouter and TypeSafe (Jev):</strong> with the same permission, your message and a short summary of the relevant personal context are sent through OpenRouter to TypeSafe's Jev decision model. Jev chooses what your request is about and which part of Mavlo handles it; it returns choices, not written replies.</li>
+  <li><strong>Backup AI:</strong> if Google Gemini is unavailable, the request that would have gone to Gemini may instead be answered, through OpenRouter, by Google's Gemini on Google Cloud Vertex AI or by OpenAI's GPT-5 mini on Microsoft Azure. The same permission applies.</li>
+  <li><strong>Restaurant menu search:</strong> when you log an item from a restaurant chain, only the chain and item names (for example, "McDonald's Big Mac") are sent through OpenRouter to Exa's web search, limited to the chain's own website, to read its published nutrition. No account, profile, or health information is sent. The published nutrition found is kept to answer later requests for the same item; who asked is not.</li>
   <li><strong>Nutrition data sources</strong> (e.g., USDA FoodData Central, Open Food Facts): used to look up foods and barcodes.</li>
   <li><strong>Billing</strong> (RevenueCat and Apple): to process and validate your subscription.</li>
   <li><strong>Analytics &amp; reliability</strong>: limited diagnostics to keep the app working.</li>
 </ul>
 <p>We use the paid Gemini API. Under <a href="https://ai.google.dev/gemini-api/docs/zdr">Google's current data-retention documentation</a>, Google does not use paid API prompts or responses to improve its products. Google retains text prompts, contextual information, and outputs for abuse monitoring; its <a href="https://ai.google.dev/gemini-api/docs/usage-policies">published policy states 55 days</a>. When Mavlo uses Google Search grounding for a source-backed answer, Google stores the related prompt, context, and output for 30 days.</p>
+<p>Requests through OpenRouter go only to endpoints with a zero data retention policy (Jev, Gemini on Vertex AI, and GPT-5 mini on Azure), so those providers do not keep the prompts or replies after answering. Under <a href="https://openrouter.ai/docs/guides/privacy/data-collection">OpenRouter's data documentation</a>, OpenRouter does not store prompts or responses unless a customer opts in, which Mavlo does not; it keeps request metadata such as token counts and timing.</p>
+<p><strong>Reply feedback:</strong> when you flag a reply, that reply, the message it answered, your reason, and any note are shared with the Mavlo team to review what went wrong and improve Mavlo. Nothing else from your conversations is read for it. The flag is included in your data export and is deleted with the reply, the conversation, or your account. Otherwise, the team does not read your conversations; Mavlo's diagnostics record counts, timings, and error codes, not what you wrote.</p>
 <div class="box"><strong>We never sell your personal data.</strong> We <strong>never</strong> use your health, fitness, or nutrition data for advertising, marketing, or data mining, and we never share it with data brokers. We do not track you across other companies' apps or websites.</div>
 
 <h2>4. Permissions</h2>
-<p>Mavlo asks for permissions only when a feature needs them, with an in-app explanation: <strong>Camera</strong> (meal/label photos), <strong>Photo Library</strong> (choosing photos), <strong>Microphone</strong> (voice input), <strong>Health</strong> (optional Apple Health import), and <strong>Notifications</strong> (reminders). You can change device permissions in your iPhone settings. In the app, you can withdraw Google Gemini data-sharing permission and control whether Mavlo may use the exact wording of reviewed memories in future conversations.</p>
+<p>Mavlo asks for permissions only when a feature needs them, with an in-app explanation: <strong>Camera</strong> (meal/label photos), <strong>Photo Library</strong> (choosing photos), <strong>Microphone</strong> (voice input), <strong>Health</strong> (optional Apple Health import), and <strong>Notifications</strong> (reminders). You can change device permissions in your iPhone settings. In the app, you can withdraw AI data-sharing permission (Google Gemini, and Jev and the backup AI through OpenRouter) and control whether Mavlo may use the exact wording of reviewed memories in future conversations.</p>
 
 <h2>5. Data retention</h2>
 <p>We keep your account data while your account exists. Images, video, transcripts, and related records may be held in private storage when needed to process a request, show its result, or support your data controls. Raw voice audio is kept temporarily on your device for a transcription retry and sent to Google Gemini when you request transcription; Mavlo does not keep the raw recording in account storage. The app provides a private-media inventory and an in-app path to request removal of retained items. When you request account deletion, the server processes deletion in stages as described below.</p>
@@ -72,7 +79,7 @@
 <ul>
   <li><strong>Access &amp; export:</strong> request a copy of your data.</li>
   <li><strong>Delete:</strong> request permanent account and data deletion in-app (<em>Settings → Delete account</em>) or through the options on our <a href="account-deletion.html">account deletion page</a>.</li>
-  <li><strong>Withdraw consent:</strong> change device permissions in iPhone settings, withdraw Google Gemini sharing permission in-app, or turn off future use of exact reviewed memory wording in the app's rights controls.</li>
+  <li><strong>Withdraw consent:</strong> change device permissions in iPhone settings, withdraw AI data-sharing permission in-app, or turn off future use of exact reviewed memory wording in the app's rights controls.</li>
   <li>Depending on where you live, you may have additional rights (access, correction, deletion, portability, objection). Contact us to exercise them.</li>
 </ul>
 
@@ -97,6 +104,6 @@
 <h2>13. Contact</h2>
 <p>Dogancan Baris — <a href="mailto:barisdogancan@gmail.com">barisdogancan@gmail.com</a></p>
 
-<footer>© 2026 Dogancan Baris. Mavlo and the Mavlo logo are trademarks of Dogancan Baris. Apple Health, App Store, and Google are trademarks of their respective owners.</footer>
+<footer>© 2026 Dogancan Baris. Mavlo and the Mavlo logo are trademarks of Dogancan Baris. Apple Health, App Store, Google, OpenRouter, TypeSafe, Exa, OpenAI, and Microsoft Azure are trademarks of their respective owners.</footer>
 
 </div></body></html>
